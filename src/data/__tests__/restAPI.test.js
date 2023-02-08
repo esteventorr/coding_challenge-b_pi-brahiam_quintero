@@ -20,7 +20,7 @@ testif(!mockMode.enabled)("Initialize Runs", async () => {
 
   expect(Array.isArray(await getAllPokemonsArr())).toBe(true);
   const postResult = await addNewPokemon(singlePokemonMock);
-  expect(typeof postResult == "object").toBe(true);
+  expect(typeof postResult === "object").toBe(true);
   if (postResult) {
     singlePokemonMock.id = postResult.insertId;
   }
@@ -29,7 +29,7 @@ testif(!mockMode.enabled)("Initialize Runs", async () => {
       "string"
   ).toBe(true);
 
-  expect(typeof (await removePokemon(singlePokemonMock.id)) == "string").toBe(
+  expect(typeof (await removePokemon(singlePokemonMock.id)) === "string").toBe(
     true
   );
 });

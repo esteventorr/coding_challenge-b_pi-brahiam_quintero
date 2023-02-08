@@ -37,10 +37,10 @@ function Tools() {
   });
 
   function hanldleNewClicked() {
-    if (editBoxMode == "edit") {
+    if (editBoxMode === "edit") {
       editBoxClear();
       editBoxModeSwitch();
-      if (editBoxShow == false) editBoxToggle();
+      if (editBoxShow === false) editBoxToggle();
     } else {
       if (editBoxShow) editBoxClear();
       editBoxToggle();
@@ -51,10 +51,12 @@ function Tools() {
     if (filterModeEnabled) {
       let pokemonFilter = allPokemons.filter((element) => {
         return (
-          element.id == filterModeTarget ||
-          element.nombre.includes(filterModeTarget) ||
-          element.ataque == filterModeTarget ||
-          element.defensa == filterModeTarget
+          element.id === filterModeTarget ||
+          element.nombre
+            .toLowerCase()
+            .includes(filterModeTarget.toLowerCase()) ||
+          element.ataque === filterModeTarget ||
+          element.defensa === filterModeTarget
         );
       });
       setFilterModeMatch(pokemonFilter);
@@ -64,7 +66,7 @@ function Tools() {
   function handleSearchChange(event) {
     event.preventDefault();
     let value = event.target.value;
-    if (value != "") {
+    if (value !== "") {
       setFilterModeEnabled(true);
     } else {
       setFilterModeEnabled(false);
@@ -79,7 +81,11 @@ function Tools() {
   return (
     <div className={"tools"}>
       <div className="tools__inner">
-        <img className="tools__icon icon" src={search}></img>
+        <img
+          alt={"Search Pokemon Icon"}
+          className="tools__icon icon"
+          src={search}
+        ></img>
         <input
           className="tools__input-search --gray-border tb-inp"
           type="search"
@@ -94,7 +100,12 @@ function Tools() {
         className="tools__button-new --primary tb-new-bt"
         onClick={hanldleNewClicked}
       >
-        <img className="tools__icon icon" src={plus}></img>Nuevo
+        <img
+          alt={"Add Pokemon Icon"}
+          className="tools__icon icon"
+          src={plus}
+        ></img>
+        Nuevo
       </button>
     </div>
   );

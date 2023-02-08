@@ -12,5 +12,5 @@ import {
 import { useAppStateStore } from "../zustandStores.js";
 
 test("Zustand Test", () => {
-  expect(typeof useAppStateStore == "function").toBe(true);
+  expect(typeof useAppStateStore === "function").toBe(true);
 });

@@ -30,16 +30,6 @@ const getAllPokemonsArr = async () => {
   return allPokemon;
 };
 
-/* const getSinglePokemon = async (id, callbackFun) => {
-  const pokemonFound = await axios
-    .get(`${endpointURL}/pokeapi/?id=${id}`)
-    .then((response) => response.data.content[0]);
-  if (callbackFun) {
-    callbackFun(pokemonFound);
-  }
-  return pokemonFound;
-}; */
-
 const updatePokemon = async (id, pokemon) => {
   let mappingPokemon = {
     id: id,

@@ -36,7 +36,7 @@ function PokemonRow({ pokemon }) {
 
   async function handleEditPokemon(event) {
     event.preventDefault();
-    if (editBoxMode == "new") {
+    if (editBoxMode === "new") {
       editBoxModeSwitch();
     }
     editBoxClear();
@@ -66,13 +66,21 @@ function PokemonRow({ pokemon }) {
           onClick={handleEditPokemon}
           className="pokemon-row__button action_icon --secondary pok-row-edit"
         >
-          <img className="pokemon-row__icon icon" src={edit}></img>
+          <img
+            alt={"Edit Pokemon Icon"}
+            className="pokemon-row__icon icon"
+            src={edit}
+          ></img>
         </button>
         <button
           onClick={handleDeletePokemon}
           className="pokemon-row__button action_icon --secondary pok-row-delete"
         >
-          <img className="pokemon-row__icon icon" src={trash}></img>
+          <img
+            alt={"Delete Pokemon Icon"}
+            className="pokemon-row__icon icon"
+            src={trash}
+          ></img>
         </button>
       </td>
     </tr>

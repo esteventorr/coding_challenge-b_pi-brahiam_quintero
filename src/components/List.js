@@ -19,7 +19,7 @@ function List() {
   let pokemonsToRender = filterModeEnabled ? filterModeMatch : allPokemons;
 
   useEffect(() => {
-    if (allPokemons.length == 0) {
+    if (allPokemons.length === 0) {
       getAllPokemons();
     }
     pokemonsToRender = filterModeEnabled ? filterModeMatch : allPokemons;
@@ -40,7 +40,7 @@ function List() {
           </thead>
         ) : null}
         <tbody>
-          {pokemonsToRender == null || pokemonsToRender.length == 0 ? (
+          {pokemonsToRender === null || pokemonsToRender.length === 0 ? (
             <tr>
               <td colSpan="5" className="--centered">
                 No se han encontrado pokemones 🤖

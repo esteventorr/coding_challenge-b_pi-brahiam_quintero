@@ -16,7 +16,7 @@ const useAppStateStore = create((set) => ({
   editBoxMode: "new",
   editBoxModeSwitch: () =>
     set((state) => ({
-      editBoxMode: state.editBoxMode == "new" ? "edit" : "new",
+      editBoxMode: state.editBoxMode === "new" ? "edit" : "new",
     })),
   editBoxValues: {
     id: -1,

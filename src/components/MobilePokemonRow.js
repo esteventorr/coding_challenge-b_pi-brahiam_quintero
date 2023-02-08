@@ -41,7 +41,7 @@ function MobilePokemonRow({ pokemon }) {
   async function handleEditPokemon(event) {
     event.preventDefault();
     editBoxClear();
-    if (editBoxMode == "new") {
+    if (editBoxMode === "new") {
       editBoxModeSwitch();
     }
     editBoxLoadPokemon(pokemon);
@@ -74,13 +74,13 @@ function MobilePokemonRow({ pokemon }) {
                 onClick={handleEditPokemon}
                 className="mob-pokemon-row__button --secondary pok-row-edit"
               >
-                <img className="mob-pokemon-row__icon icon" src={edit}></img>
+                <img alt="Edit Icon" className="mob-pokemon-row__icon icon" src={edit}></img>
               </button>
               <button
                 onClick={handleDeletePokemon}
                 className="mob-pokemon-row__button --secondary pok-row-delete"
               >
-                <img className="mob-pokemon-row__icon icon" src={trash}></img>
+                <img alt="Delete Icon" className="mob-pokemon-row__icon icon" src={trash}></img>
               </button>
             </div>
           </div>

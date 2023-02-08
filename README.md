@@ -2,6 +2,7 @@
 1. [Welcoming](#coding-challenge---bpi)
 2. [Boring Introduction](#introduction)
 3. [Fun Documentation](#documentation)
+4. [Technical Notes ( !important )](#technical-notes)
 ___
 # Coding Challenge - B.Pi.
 ###### Coder: Brahiam E. Quintero T.
@@ -46,10 +47,11 @@ It's a good idea to familiarize yourself with the basics of React and TDD before
 For time reasons it was not possible to follow TDD strictly.
 ___
 ## Documentation
-![Test-Driven Development Cycle](https://esteventorr.github.io/images/graphical/pokemon_editor_doc.png)
+![Pokemon Editor Visual Documentation](https://esteventorr.github.io/images/graphical/pokemon_editor_doc.png)
 
 ### Technical Notes:
-- **src/utils/utilVars.js** has a class where you can enable or disable the **Mock Mode**, enabling it will manage the Data on the Local Storage. it's useful when the Server is offline.
+- **src/utils/utilVars.js** has a class where you can enable or disable the **Mock Mode**, enabling it will manage the Data on the Local Storage. it's useful when the Server is offline(__*The Mock Mode is Enabled by Default*__).
+- **How to Run it?** clone the repository, open the project, **npm install**, then **npm start**
 ___
 **Thank You!**
-*esteventorr*
+*@esteventorr*
