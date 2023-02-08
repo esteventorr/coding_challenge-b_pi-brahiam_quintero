@@ -1,4 +1,9 @@
-#Coding Challenge - B.Pi.
+# Table of Contents
+1. [Welcoming](#coding-challenge---bpi)
+2. [Boring Introduction](#introduction)
+3. [Fun Documentation](#documentation)
+___
+# Coding Challenge - B.Pi.
 ###### Coder: Brahiam E. Quintero T.
 ___
 ##### Welcome To The Pokemons's Editor
