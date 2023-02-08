@@ -1,0 +1,42 @@
+.tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tools__button-new {
+  margin: 0px;
+}
+
+.tools__inner {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tools__inner input {
+  padding: 8px;
+  padding-left: 38px;
+}
+
+.tools__inner img.icon {
+  position: absolute;
+  padding: 10px;
+  width: 18px;
+}
+
+@media screen and (max-width: 720px) {  
+
+  .tools .tools__inner {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .tools .tools__input-search {
+    width: 100%;
+  }
+
+  .tools .tools__button-new {
+    min-width: unset;
+    margin: 10px;
+  }
+}

@@ -1,0 +1,56 @@
+button {
+  display: inline-flex;
+  border: none;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+button img {
+  width: 22px;
+  padding: 0px 10px 0px 0px;
+}
+
+.--gray-border {
+  border: 2px solid #dddddd;
+}
+
+.--wrapper {
+  background-color: white;
+}
+
+.--wrapper.--transparent {
+  background-color: transparent;
+}
+
+button.--primary {
+  background-color: #6a57fa;
+  color: white;
+  margin: 20px 5px;
+  width: 120px;
+}
+button.--secondary {
+  background-color: transparent;
+  color: #6a57fa;
+}
+
+td.--centered {
+  text-align: center;
+}
+
+.--accent-primary {
+  accent-color: #6a57fa;
+}
+
+input:required:focus:invalid {
+  outline: 2px solid red;
+}
+
+input:required:focus:valid {
+  outline: 2px solid rgb(201, 243, 163);
+}
+
+.--grow {
+  flex-grow: 1;
+}

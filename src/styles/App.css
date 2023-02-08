@@ -1,0 +1,27 @@
+.app > .--wrapper {
+  margin: 10px 30px;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 720px) {
+  .app > .--wrapper {
+    margin: 0px;
+  }
+
+  .app .app__header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+
+    background-color: white;
+    border-bottom: 3px solid #6a57fa;
+  }
+
+  .app .app__header-title {
+    font-size: 1.5em;
+    margin: 0px;
+    padding: 10px;
+    padding-bottom: 0px;
+  }  
+}

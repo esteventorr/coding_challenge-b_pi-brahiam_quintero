@@ -1,0 +1,105 @@
+.edit-box {
+  padding: 5px;
+}
+
+.edit-box .edit-box__title {
+  text-align: center;
+}
+
+.edit-box .edit-box__wrapper,
+.edit-box .edit-box__actions {
+  display: flex;
+}
+
+.edit-box .edit-box__wrapper {
+  justify-content: space-around;
+}
+
+.edit-box .edit-box__inner {
+  width: 45%;
+}
+
+.edit-box .edit-box__actions {
+  justify-content: center;
+}
+
+.edit-box .edit-box__field {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  margin: 15px 0px;
+}
+
+.edit-box .edit-box__label {
+  width: 80px;
+  padding: 5px;
+}
+
+.edit-box .edit-box__input {
+  height: 25px;
+  padding: 5px;
+}
+
+.edit-box .edit-box__input--text {
+  width: 200px;
+}
+
+.edit-box .edit-box__range {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 5px 5px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 720px) {
+  .edit-box {
+    position: sticky;
+    bottom: 0;  
+    z-index: 1;
+    border-top: 3px solid #6a57fa;
+    padding: 10px 20px;
+    margin: 1px !important;
+  }
+
+  .mob-pokemon-row__pokemon-details-and-actions h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .edit-box .edit-box__title {
+    font-size: 1.2em;
+    margin: 0px;
+    padding: 3px;
+    padding-bottom: 5px;
+  }
+
+  .edit-box .edit-box__wrapper {
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+  }
+  .edit-box .edit-box__inner {
+    width: 100%;
+  }
+
+  .edit-box .edit-box__field {
+    height: unset;
+    margin: 5px 0px;
+    justify-content: space-around;
+  }
+
+  .edit-box .edit-box__label {
+    min-width: 20%;
+    text-align: left;
+  }
+
+  .edit-box .edit-box__input {
+    height: unset;
+    width: 80%;
+  }
+
+  .edit-box .edit-box__button {
+    margin: 8px;
+  }
+}

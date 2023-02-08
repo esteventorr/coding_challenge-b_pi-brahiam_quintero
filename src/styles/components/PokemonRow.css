@@ -1,0 +1,10 @@
+.pokemon-row__img {
+  margin: auto;
+  background-position: center center;
+  width: 70px;
+  height: 70px;
+}
+
+.pokemon-row__td {
+  padding: 8px;
+}

@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+#Coding Challenge - B.Pi.
+###### Coder: Brahiam E. Quintero T.
+___
+##### Welcome To The Pokemons's Editor
+This is a React App where you can see a List of Pokemons, you can Search for a Pokemon and Add, Edit or Remove items in that list.
+##### Expected Desktop UI Design:
+![View of the expected UI Design](https://esteventorr.github.io/images/graphical/Challenge-UI-Design.png)
+##### Requirements
+- Implement tests(TDD if possible) and follow good coding practices(ie. Clean Code, Solid) 
+___
+## Introduction
+Human 🧑‍💻: how can I get started developing a react app using TDD?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chat-GPT 🤖: To get started with developing a React app using TDD (Test-Driven Development), you can follow these steps:
 
-## Available Scripts
+Set up your development environment: Make sure you have Node.js, npm, and a code editor installed on your computer.
 
-In the project directory, you can run:
+Create a new React project: Use the create-react-app command line tool to quickly create a new React project with a basic file structure.
 
-### `npm start`
+Choose a testing library: There are several popular testing libraries for React, including Jest, Mocha, and Enzyme. Choose one that you are familiar with or that you would like to learn.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Write tests: Write tests for the components and features of your React app before you write any code. This will help you understand the requirements and design of your app before you start coding.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Write code: Write the code for your React components and features, making sure that they pass the tests you wrote in step 4.
 
-### `npm test`
+Refactor code: Refactor your code as necessary to make it more maintainable and efficient.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Repeat: Continue this process of writing tests, writing code, and refactoring until your React app is complete.
 
-### `npm run build`
+It's a good idea to familiarize yourself with the basics of React and TDD before you start, so make sure to read some tutorials or take an online course if needed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###Trusting the AI:
+#### Technologies chosen:
+ - **Testing Library:** JEST
+ - **JS Library:** React
+ - **IDE:** VS Code
+#### TDD Cycle:
+![Test-Driven Development Cycle](https://wpblog.semaphoreci.com/wp-content/uploads/2021/12/TDD_diagram-2-1056x960.png)
+###### Note:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For time reasons it was not possible to follow TDD strictly.
+___
+## Documentation
+![Test-Driven Development Cycle](https://esteventorr.github.io/images/graphical/pokemon_editor_doc.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Technical Notes:
+- **src/utils/utilVars.js** has a class where you can enable or disable the **Mock Mode**, enabling it will manage the Data on the Local Storage. it's useful when the Server is offline.
+___
+**Thank You!**
+*esteventorr*

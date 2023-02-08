@@ -1,0 +1,14 @@
+.list__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.list__th {
+  padding: 8px;
+}
+
+@media screen and (max-width: 720px) {
+  .list.--wrapper {
+    background-color: transparent;
+  }
+}

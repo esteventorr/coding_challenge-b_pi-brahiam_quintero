@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css";
+import { mockMode } from "./utils/utilVars";
+import { initMock } from "./data/dataConnector";
+import EditBox from "./components/EditBox";
+import Tools from "./components/Tools";
+import List from "./components/List";
 
 function App() {
+  if (mockMode.enabled) {
+    initMock();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="app__header --wrapper --transparent">
+        <h4 className="app__header-title">Listado de Pokemon</h4>
+        <Tools />
+      </div>
+      <List />
+      <EditBox />
     </div>
   );
 }

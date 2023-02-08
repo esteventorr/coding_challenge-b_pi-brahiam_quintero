@@ -1,0 +1,7 @@
+{
+  "terminal.integrated.fontSize": 12,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "path-intellisense.absolutePathToWorkspace": false,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.autoTriggerNextSuggestion": true
+}
