@@ -34,7 +34,7 @@ Repeat: Continue this process of writing tests, writing code, and refactoring un
 
 It's a good idea to familiarize yourself with the basics of React and TDD before you start, so make sure to read some tutorials or take an online course if needed.
 
-###Trusting the AI:
+### Trusting the AI:
 #### Technologies chosen:
  - **Testing Library:** JEST
  - **JS Library:** React
