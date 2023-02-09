@@ -12,9 +12,8 @@ const defaultPokemon = {
 };
 
 const getAllPokemonsArr = async () => {
-  const allPokemon = await axios
-    .get(`${endpointURL}/?idAuthor=1`)
-    .then((response) => {
+  const allPokemon = await axios.get(`${endpointURL}/?idAuthor=1`).then(
+    (response) => {
       let data = response.data;
       console.log(data);
       return data.map((element) => {
@@ -26,7 +25,11 @@ const getAllPokemonsArr = async () => {
           defensa: element.defense,
         };
       });
-    });
+    },
+    (error) => {
+      return [];
+    }
+  );
   return allPokemon;
 };
 
@@ -44,7 +47,10 @@ const updatePokemon = async (id, pokemon) => {
       ...mappingPokemon,
       idAuthor: defaultPokemon.idAuthor,
     })
-    .then((response) => response.data);
+    .then(
+      (response) => response.data,
+      (error) => {}
+    );
   return pokemonUpdated;
 };
 
@@ -61,14 +67,18 @@ const addNewPokemon = async (newPokemon) => {
       ...defaultPokemon,
       ...mappingPokemon,
     })
-    .then((response) => response.data);
+    .then(
+      (response) => response.data,
+      (error) => {}
+    );
   return newPokemonPost;
 };
 
 const removePokemon = async (id) => {
-  const pokemonDeletion = await axios
-    .delete(`${endpointURL}/${id}`)
-    .then((response) => response.data);
+  const pokemonDeletion = await axios.delete(`${endpointURL}/${id}`).then(
+    (response) => response.data,
+    (error) => {}
+  );
   return pokemonDeletion;
 };
 

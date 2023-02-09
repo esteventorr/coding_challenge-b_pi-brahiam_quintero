@@ -4,7 +4,7 @@ export const endpointURL =
 class MockStatus {
   constructor() {
     // Change to False in order to get data from the Server
-    this.enabled = true;
+    this.enabled = false;
   }
   set setMockMode(mode) {
     this.enabled = mode;

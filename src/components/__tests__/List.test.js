@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import List from "../List";
 
-it("changes the class when hovered", () => {
+it("Test List Component", () => {
   const { container } = render(<List />);
   const list = container.getElementsByClassName("list");
   expect(list.length).toBe(1);

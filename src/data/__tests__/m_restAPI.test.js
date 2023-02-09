@@ -9,7 +9,7 @@ import {
   exists,
 } from "../m_restAPI.js";
 
-test("Initialize Runs", () => {
+test("Test MOCK API", () => {
   localStorage.removeItem("pk-db");
   expect(exists()).toBe(false);
   expect(m_initialize()).toBe(true);

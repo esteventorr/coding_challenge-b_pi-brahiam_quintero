@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react";
-import MobilePokemonRow from "../default/MobilePokemonRow";
+import MobilePokemonRow from "../MobilePokemonRow";
 
-it("changes the class when hovered", () => {
+it("Test Mobile Pokemon Row Component", () => {
   const singlePokemonMock = {
     id: -1,
     nombre: "Mock Pokemon",

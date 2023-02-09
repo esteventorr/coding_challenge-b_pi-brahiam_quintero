@@ -137,15 +137,23 @@ function EditBox() {
         </div>
         <div className="edit-box__actions --full-width">
           <button type="submit" className="edit-box__button --primary">
-            <img alt="Guardar / Actualizar" className="edit-box__icon icon" src={save}></img>
+            <img
+              alt="Guardar / Actualizar"
+              className="edit-box__icon icon"
+              src={save}
+            ></img>
             {editBoxMode === "new" ? "Guardar" : "Actualizar"}
           </button>
           <button
             type="button"
             onClick={handlePokemonCreationCancel}
-            className="edit-box__button --primary"
+            className="edit-box__button edit-box__button--cancel --primary"
           >
-            <img alt="Limpiar / Cerrar" className="edit-box__icon icon" src={x}></img>
+            <img
+              alt="Limpiar / Cerrar"
+              className="edit-box__icon icon"
+              src={x}
+            ></img>
             {editBoxMode === "new" ? "Limpiar" : "Cerrar"}
           </button>
         </div>

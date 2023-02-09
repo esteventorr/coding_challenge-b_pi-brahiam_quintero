@@ -40,7 +40,9 @@ function List() {
           </thead>
         ) : null}
         <tbody>
-          {pokemonsToRender === null || pokemonsToRender.length === 0 ? (
+          {pokemonsToRender === undefined ||
+          pokemonsToRender === null ||
+          pokemonsToRender.length === 0 ? (
             <tr>
               <td colSpan="5" className="--centered">
                 No se han encontrado pokemones 🤖

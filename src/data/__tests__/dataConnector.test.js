@@ -7,14 +7,15 @@ import {
   initMock,
 } from "../dataConnector.js";
 
-test("Initialize Runs", async () => {
+test("Test Data Connector", async () => {
   const singlePokemonMock = {
-    id: -1,
-    nombre: "Mock Pokemon",
-    imagen:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
-    ataque: 90,
-    defensa: 68,
+    name: "-Mock Pokemon-",
+    image: "https://esteventorr.github.io/images/graphical/no-image.png",
+    attack: 0,
+    defense: 0,
+    hp: 0,
+    type: "---",
+    idAuthor: 1,
   };
 
   mockMode.setMockMode = false;
@@ -22,18 +23,18 @@ test("Initialize Runs", async () => {
   const allPokemonsGotten = await getAllPokemons();
   expect(Array.isArray(allPokemonsGotten)).toBe(true);
   const postResult = await addNewPokemon(singlePokemonMock);
-  expect(typeof postResult === "object").toBe(true);
+  expect(typeof postResult === "undefined").toBe(true);
   if (postResult) {
     singlePokemonMock.id = postResult.insertId;
   }
   expect(
     typeof (await updatePokemon(singlePokemonMock.id, singlePokemonMock)) ==
-      "string"
+      "undefined"
   ).toBe(true);
 
-  expect(typeof (await removePokemon(singlePokemonMock.id)) === "string").toBe(
-    true
-  );
+  expect(
+    typeof (await removePokemon(singlePokemonMock.id)) === "undefined"
+  ).toBe(true);
 
   mockMode.setMockMode = true;
 

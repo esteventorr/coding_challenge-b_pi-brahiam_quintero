@@ -8,7 +8,7 @@ import {
 
 const testif = (condition) => (condition ? it : it.skip);
 
-testif(!mockMode.enabled)("Initialize Runs", async () => {
+testif(!mockMode.enabled)("Test Rest API", async () => {
   const singlePokemonMock = {
     id: -1,
     nombre: "Mock Pokemon",
@@ -21,15 +21,16 @@ testif(!mockMode.enabled)("Initialize Runs", async () => {
   expect(Array.isArray(await getAllPokemonsArr())).toBe(true);
   const postResult = await addNewPokemon(singlePokemonMock);
   expect(typeof postResult === "object").toBe(true);
+  console.log("Pokemon Created", postResult);
   if (postResult) {
-    singlePokemonMock.id = postResult.insertId;
+    singlePokemonMock.id = postResult.id;
   }
-  expect(
-    typeof (await updatePokemon(singlePokemonMock.id, singlePokemonMock)) ==
-      "string"
-  ).toBe(true);
 
-  expect(typeof (await removePokemon(singlePokemonMock.id)) === "string").toBe(
-    true
-  );
+  const singPoke = await updatePokemon(singlePokemonMock.id, singlePokemonMock);
+  console.log("Pokemon Updated", singPoke);
+  expect(typeof singPoke == "object").toBe(true);
+
+  const removeResult = await removePokemon(singlePokemonMock.id);
+  console.log("Pokemon Removed");
+  expect(typeof removeResult === "string").toBe(true);
 });
